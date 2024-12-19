@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f4f4f9;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2em 0;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.section-bar {
+    width: 60px;
+    height: 5px;
+    background: linear-gradient(90deg, #000000, #663399);
+    margin: 0 auto 1em auto;
+    border-radius: 2px;
+}
+
+.header {
+    background: linear-gradient(135deg, #000000, #663399);
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+section {
+    padding: 4em 0;
+    text-align: center;
+}
+
+.resume-section a.cv-button,
+.institution-link,
+.ref-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.8em 1.2em;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-section a.cv-button:hover,
+.institution-link:hover,
+.ref-button:hover {
+    background-color: #663399;
+}
+
+.contact-section form {
+    max-width: 500px;
+    margin: 1em auto;
+}
+
+.contact-section label {
+    display: block;
+    margin-top: 1em;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-section button {
+    padding: 0.8em 1.2em;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #663399;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
