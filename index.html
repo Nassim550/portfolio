@@ -11,7 +11,6 @@
 </head>
 <body>
     <header class="header">
-        <div class="circle-bg"></div>
         <div class="container">
             <h1>Nassim Reghoud</h1>
             <p>Étudiant en BTS SIO (SISR)</p>
@@ -19,7 +18,7 @@
                 <ul>
                     <li><a href="#home">Accueil</a></li>
                     <li><a href="#about">À propos</a></li>
-                    <li><a href="#resume">CV</a></li>
+                    <li><a href="#skills">Compétences</a></li>
                     <li><a href="#projects">Projets</a></li>
                     <li><a href="#stages">Stages</a></li>
                     <li><a href="#veille">Veille</a></li>
@@ -34,8 +33,8 @@
         <div class="intro">
             <div class="section-bar"></div>
             <h2>Bienvenue sur mon portfolio</h2>
-            <p>Explorez mes compétences en administration systèmes, réseaux et supervision.</p>
-            <a href="#contact" class="cta-button">Contactez-moi</a>
+            <p>Futur administrateur systèmes et réseaux, passionné par la cybersécurité et l'infrastructure.</p>
+            <a href="#contact" class="cta-button">Me contacter</a>
         </div>
     </section>
 
@@ -43,27 +42,34 @@
         <div class="container">
             <div class="section-bar"></div>
             <h2>À propos de moi</h2>
-            <p>Je m'appelle Nassim Reghoud, étudiant en <strong>BTS Services Informatiques aux Organisations (SIO)</strong>, spécialité <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux).</p>
+            <div class="about-content">
+                <p>Actuellement en deuxième année de <strong>BTS Services Informatiques aux Organisations (SIO)</strong> à l'Institution Saint Aspais, je me spécialise en <strong>SISR</strong>. Mon parcours est guidé par une forte curiosité pour la gestion des infrastructures critiques et la sécurisation des échanges de données.</p>
+                <p>Grâce à mes expériences en milieu municipal et en DSI privée, j'ai développé une approche rigoureuse du support utilisateur et de l'administration réseau. Mon objectif est de poursuivre vers une licence ou une école d'ingénieur pour approfondir mes connaissances en sécurité informatique.</p>
+            </div>
         </div>
     </section>
 
-    <section id="resume" class="resume-section">
+    <section id="skills" class="skills-section">
         <div class="container">
             <div class="section-bar"></div>
-            <h2>Mon CV</h2>
-            <p>Téléchargez mon CV pour en savoir plus sur mon parcours professionnel.</p>
-            <a href="CV NASSIM REGHOUD.pdf" class="cv-button" download>Télécharger mon CV (PDF)</a>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-bar"></div>
-            <h2>Projets Informatiques</h2>
-            <div class="project-list">
-                <div class="project-item">
-                    <h3>Site Web koo2fourchette</h3>
-                    <p>Développement d'un site web dynamique incluant la gestion de contenu.</p>
+            <h2>Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Systèmes & Cloud</h3>
+                    <div class="skill-bar"><div class="progress" style="width: 85%;"><span>Windows Server / Linux</span></div></div>
+                    <div class="skill-bar"><div class="progress" style="width: 70%;"><span>Virtualisation (VMware/Hyper-V)</span></div></div>
+                    <div class="skill-bar"><div class="progress" style="width: 60%;"><span>Nextcloud / Active Directory</span></div></div>
+                </div>
+                <div class="skill-card">
+                    <h3>Réseaux & Sécurité</h3>
+                    <div class="skill-bar"><div class="progress" style="width: 80%;"><span>Cisco / Alcatel Switching</span></div></div>
+                    <div class="skill-bar"><div class="progress" style="width: 75%;"><span>VLANs / WPA3 / Sécurité Wi-Fi</span></div></div>
+                    <div class="skill-bar"><div class="progress" style="width: 65%;"><span>Zabbix (Supervision)</span></div></div>
+                </div>
+                <div class="skill-card">
+                    <h3>Développement & Outils</h3>
+                    <div class="skill-bar"><div class="progress" style="width: 75%;"><span>HTML / CSS / PowerShell</span></div></div>
+                    <div class="skill-bar"><div class="progress" style="width: 80%;"><span>ITSM (iTop / GLPI)</span></div></div>
                 </div>
             </div>
         </div>
@@ -75,74 +81,45 @@
             <h2>Expériences en Entreprise</h2>
             
             <div class="stage-card">
+                <div class="badge">2026</div>
                 <h3>Groupe ADENES - DSI</h3>
-                <p class="stage-date">Janvier 2026 - Février 2026 (5 semaines)</p>
-                <p><strong>Missions principales :</strong></p>
+                <p class="stage-date">Janvier - Février 2026</p>
                 <ul class="stage-tasks">
-                    <li><strong>Migration d'infrastructure :</strong> Décommissionnement du serveur de fichiers FIC-5.</li>
-                    <li><strong>Supervision :</strong> Mise en place de monitoring web sous Zabbix.</li>
-                    <li><strong>Automatisation :</strong> Gestion de crise sur ferme RDS via scripts PowerShell.</li>
-                    <li><strong>Gestion de services :</strong> Migration de l'outil ITSM vers iTop v2.</li>
-                    <li><strong>Support :</strong> Support N2 et projet de migration Nextcloud sur parc macOS.</li>
+                    <li>Migration iTop v2 et monitoring Zabbix.</li>
+                    <li>Automatisation de crise via PowerShell (Ferme RDS).</li>
+                    <li>Décommissionnement de serveurs de fichiers.</li>
                 </ul>
             </div>
 
             <div class="stage-card">
+                <div class="badge">2025</div>
                 <h3>Mairie de Moissy-Cramayel</h3>
-                <p class="stage-date">Mai 2025 - Juillet 2025 (6 semaines)</p>
-                <p><strong>Missions principales :</strong></p>
+                <p class="stage-date">Mai - Juillet 2025</p>
                 <ul class="stage-tasks">
-                    <li><strong>Audit réseau :</strong> Identification et cartographie des bornes Wi-Fi.</li>
-                    <li><strong>Infrastructure :</strong> Mise à jour de firmware (Alcatel-Lucent OAW) et déploiement de WPA3.</li>
-                    <li><strong>Sécurité :</strong> Gestion des SSID, VLANs et mise à jour de la protection antivirus.</li>
-                    <li><strong>Support technique :</strong> Interventions directes sur les postes de travail et rédaction de documentations.</li>
+                    <li>Audit et mise à jour du parc Wi-Fi (Alcatel OAW).</li>
+                    <li>Déploiement du protocole WPA3 et gestion des VLANs.</li>
+                    <li>Support technique N1 et N2.</li>
                 </ul>
             </div>
-        </div>
-    </section>
-
-    <section id="veille" class="veille-section">
-        <div class="container">
-            <div class="section-bar"></div>
-            <h2>Veille Technologique</h2>
-            <p>Ma veille porte sur la cybersécurité et l'évolution des infrastructures Cloud sécurisées.</p>
-            <a href="veille-technologique.pdf" class="ref-button" download>Consulter ma veille</a>
         </div>
     </section>
 
     <section id="bts-reference" class="bts-reference-section">
         <div class="container">
             <div class="section-bar"></div>
-            <h2>Tableau de Synthèse</h2>
+            <h2>Référentiel BTS SIO</h2>
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Domaine du Référentiel</th>
-                            <th>Réalisation (Stage/Projet)</th>
+                            <th>Domaine de compétence</th>
+                            <th>Exemple de réalisation</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Gérer le patrimoine informatique</td>
-                            <td>Inventaire IT / Migration iTop (ADENES)</td>
-                        </tr>
-                        <tr>
-                            <td>Répondre aux incidents / Support</td>
-                            <td>Support N2 / Gestion ferme RDS (ADENES)</td>
-                        </tr>
-                        <tr>
-                            <td>Développer la présence en ligne</td>
-                            <td>Projet koo2fourchette / Portfolio</td>
-                        </tr>
-                        <tr>
-                            <td>Organiser son développement pro</td>
-                            <td>Veille Technologique</td>
-                        </tr>
-                        <tr>
-                            <td>Mettre à disposition des services IT</td>
-                            <td>Mise à jour bornes Wi-Fi (Moissy-Cramayel)</td>
-                        </tr>
+                        <tr><td>Gérer le patrimoine informatique</td><td>Inventaire GLPI / iTop</td></tr>
+                        <tr><td>Répondre aux incidents</td><td>Support N2 chez ADENES</td></tr>
+                        <tr><td>Mettre à disposition des services</td><td>Configuration SSID / VLANs</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -152,20 +129,18 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-bar"></div>
-            <h2>Contactez-moi</h2>
-            <form action="#" method="post">
-                <input type="text" id="name" name="name" placeholder="Votre Nom" required>
-                <input type="email" id="email" name="email" placeholder="Votre Email" required>
-                <textarea id="message" name="message" placeholder="Votre Message" required></textarea>
+            <h2>Contact</h2>
+            <form>
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
                 <button type="submit">Envoyer</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Nassim Reghoud. Tous droits réservés.</p>
-        </div>
+        <p>&copy; 2026 Nassim Reghoud - Portfolio BTS SIO</p>
     </footer>
 </body>
 </html>
