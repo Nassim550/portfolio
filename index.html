@@ -14,16 +14,16 @@
         <div class="circle-bg"></div>
         <div class="container">
             <h1>Nassim Reghoud</h1>
-            <p>Étudiant en BTS SIO</p>
+            <p>Étudiant en BTS SIO (SISR)</p>
             <nav>
                 <ul>
                     <li><a href="#home">Accueil</a></li>
                     <li><a href="#about">À propos</a></li>
-                    <li><a href="#resume">Mon CV</a></li>
+                    <li><a href="#resume">CV</a></li>
                     <li><a href="#projects">Projets</a></li>
-                    <li><a href="#veille">Veille Technologique</a></li>
-                    <li><a href="#institution">Institution</a></li>
-                    <li><a href="#bts-reference">Référentiel BTS</a></li>
+                    <li><a href="#stages">Stages</a></li>
+                    <li><a href="#veille">Veille</a></li>
+                    <li><a href="#bts-reference">Référentiel</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -34,7 +34,7 @@
         <div class="intro">
             <div class="section-bar"></div>
             <h2>Bienvenue sur mon portfolio</h2>
-            <p>Explorez mes compétences, projets et expériences.</p>
+            <p>Explorez mes compétences, projets et expériences en infrastructure et réseau.</p>
             <a href="#contact" class="cta-button">Contactez-moi</a>
         </div>
     </section>
@@ -51,8 +51,8 @@
         <div class="container">
             <div class="section-bar"></div>
             <h2>Mon CV</h2>
-            <p>Téléchargez mon CV pour en savoir plus sur mon parcours professionnel et mes compétences.</p>
-            <a href="CV NASSIM REGHOUD.pdf" class="cv-button" download>Télécharger mon CV</a>
+            <p>Téléchargez mon CV pour en savoir plus sur mon parcours professionnel.</p>
+            <a href="CV NASSIM REGHOUD.pdf" class="cv-button" download>Télécharger mon CV (PDF)</a>
         </div>
     </section>
 
@@ -60,10 +60,29 @@
         <div class="container">
             <div class="section-bar"></div>
             <h2>Projets Informatiques</h2>
-            <p>Voici quelques projets sur lesquels j'ai travaillé :</p>
-            <ul>
-                <li>Projet actuel : Développement d'un site web (koo2fourchette)</li>
-            </ul>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Site Web koo2fourchette</h3>
+                    <p>Développement d'un site web dynamique incluant la gestion de contenu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stages" class="stages-section">
+        <div class="container">
+            <div class="section-bar"></div>
+            <h2>Expériences en Entreprise</h2>
+            <div class="stage-card">
+                <h3>Nom de l'Entreprise / Organisation</h3>
+                <p class="stage-date">Dates du stage (ex: Mai - Juin 2025)</p>
+                <p>Missions réalisées dans le cadre du BTS :</p>
+                <ul class="stage-tasks">
+                    <li>Support utilisateur et maintenance de proximité.</li>
+                    <li>Configuration d'équipements réseaux (Switchs, Bornes Wi-Fi).</li>
+                    <li>Gestion de parc avec GLPI.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -71,9 +90,8 @@
         <div class="container">
             <div class="section-bar"></div>
             <h2>Veille Technologique</h2>
-            <p>Je m'intéresse aux dernières tendances en technologie, notamment dans le domaine des infrastructures réseaux et de la cybersécurité.</p>
-            <p>Un rapport sera bientôt disponible.</p>
-            <a href="veille-technologique.pdf" class="ref-button" download>Télécharger le rapport de veille</a>
+            <p>Je m'intéresse particulièrement à la cybersécurité et à l'évolution des infrastructures Cloud.</p>
+            <a href="veille-technologique.pdf" class="ref-button" download>Consulter ma veille</a>
         </div>
     </section>
 
@@ -81,16 +99,38 @@
         <div class="container">
             <div class="section-bar"></div>
             <h2>Institution Saint Aspais</h2>
-            <p>Découvrez l'institution où je poursuis mes études :</p>
-            <a href="https://institutionsaintaspais.fr/" target="_blank" class="institution-link">Visiter le site de l'Institution Saint Aspais</a>
+            <a href="https://institutionsaintaspais.fr/" target="_blank" class="institution-link">Visiter le site de l'établissement</a>
         </div>
     </section>
 
     <section id="bts-reference" class="bts-reference-section">
         <div class="container">
             <div class="section-bar"></div>
-            <h2>Référentiel du BTS SIO</h2>
-            <p>Téléchargez le référentiel officiel du BTS Services Informatiques aux Organisations pour en savoir plus sur le contenu de la formation.</p>
+            <h2>Référentiel BTS SIO</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Compétences</th>
+                            <th>Réalisation associée</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gérer le patrimoine informatique</td>
+                            <td>Stage / Gestion GLPI</td>
+                        </tr>
+                        <tr>
+                            <td>Travailler en mode projet</td>
+                            <td>Projet koo2fourchette</td>
+                        </tr>
+                        <tr>
+                            <td>Mettre à disposition des services</td>
+                            <td>Configuration de serveurs web</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <a href="référentielSIO.pdf" class="ref-button" download>Télécharger le Référentiel</a>
         </div>
     </section>
@@ -100,15 +140,9 @@
             <div class="section-bar"></div>
             <h2>Contactez-moi</h2>
             <form action="#" method="post">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" required></textarea>
-
+                <input type="text" id="name" name="name" placeholder="Votre Nom" required>
+                <input type="email" id="email" name="email" placeholder="Votre Email" required>
+                <textarea id="message" name="message" placeholder="Votre Message" required></textarea>
                 <button type="submit">Envoyer</button>
             </form>
         </div>
@@ -116,7 +150,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Nassim Reghoud. Tous droits réservés.</p>
+            <p>&copy; 2026 Nassim Reghoud. Tous droits réservés.</p>
         </div>
     </footer>
 </body>
