@@ -68,12 +68,8 @@ section {
     text-align: center;
 }
 
-.home-section {
-    background: #fff;
-}
-
 /* Buttons */
-.cta-button, .cv-button, .ref-button, .institution-link {
+.cta-button, .cv-button, .ref-button {
     display: inline-block;
     margin-top: 1.5em;
     padding: 10px 25px;
@@ -84,7 +80,7 @@ section {
     transition: 0.3s ease;
 }
 
-.cta-button:hover, .cv-button:hover, .ref-button:hover, .institution-link:hover {
+.cta-button:hover, .cv-button:hover, .ref-button:hover {
     background-color: #663399;
     transform: translateY(-2px);
 }
@@ -96,7 +92,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     text-align: left;
-    max-width: 800px;
+    max-width: 850px;
     margin: 20px auto;
     border-left: 5px solid #663399;
 }
@@ -112,6 +108,10 @@ section {
     list-style-position: inside;
 }
 
+.stage-tasks li {
+    margin-bottom: 8px;
+}
+
 /* Tableau Référentiel */
 .table-container {
     overflow-x: auto;
@@ -122,8 +122,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     background: white;
-    border-radius: 8px;
-    overflow: hidden;
 }
 
 th, td {
@@ -151,16 +149,9 @@ tr:nth-child(even) {
 }
 
 .contact-section input, .contact-section textarea {
-    width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 1em;
-}
-
-.contact-section textarea {
-    height: 150px;
-    resize: vertical;
 }
 
 .contact-section button {
@@ -168,20 +159,16 @@ tr:nth-child(even) {
     background-color: #000;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 .contact-section button:hover {
     background-color: #663399;
 }
 
-/* Footer */
 footer {
     background-color: #000;
     color: #888;
-    text-align: center;
     padding: 2em 0;
 }
