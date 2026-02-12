@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -27,94 +28,160 @@ h1, h2, h3 {
     width: 60px;
     height: 5px;
     background: linear-gradient(90deg, #000000, #663399);
-    margin: 0 auto 1em auto;
+    margin: 0 auto 1.5em auto;
     border-radius: 2px;
 }
 
+/* Header & Nav */
 .header {
     background: linear-gradient(135deg, #000000, #663399);
     color: #fff;
-    padding: 2em 0;
+    padding: 2.5em 0;
     text-align: center;
-    position: relative;
-}
-
-header h1 {
-    font-size: 2.5em;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1em;
+    margin-top: 1.5em;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
 }
 
+header nav ul li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Sections */
 section {
-    padding: 4em 0;
+    padding: 5em 0;
     text-align: center;
 }
 
-.resume-section a.cv-button,
-.institution-link,
-.ref-button {
+.home-section {
+    background: #fff;
+}
+
+/* Buttons */
+.cta-button, .cv-button, .ref-button, .institution-link {
     display: inline-block;
-    margin-top: 1em;
-    padding: 0.8em 1.2em;
+    margin-top: 1.5em;
+    padding: 10px 25px;
     background-color: #000;
     color: #fff;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    transition: 0.3s ease;
 }
 
-.resume-section a.cv-button:hover,
-.institution-link:hover,
-.ref-button:hover {
+.cta-button:hover, .cv-button:hover, .ref-button:hover, .institution-link:hover {
     background-color: #663399;
+    transform: translateY(-2px);
 }
 
-.contact-section form {
-    max-width: 500px;
-    margin: 1em auto;
+/* Section Stages */
+.stage-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+    border-left: 5px solid #663399;
 }
 
-.contact-section label {
-    display: block;
-    margin-top: 1em;
+.stage-date {
+    color: #663399;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
-.contact-section input,
-.contact-section textarea {
+.stage-tasks {
+    margin-top: 15px;
+    list-style-position: inside;
+}
+
+/* Tableau Référentiel */
+.table-container {
+    overflow-x: auto;
+    margin: 30px 0;
+}
+
+table {
     width: 100%;
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #eee;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #000;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Formulaire Contact */
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-section textarea {
+    height: 150px;
+    resize: vertical;
 }
 
 .contact-section button {
-    padding: 0.8em 1.2em;
+    padding: 15px;
     background-color: #000;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .contact-section button:hover {
     background-color: #663399;
 }
 
+/* Footer */
 footer {
     background-color: #000;
-    color: #fff;
+    color: #888;
     text-align: center;
-    padding: 1em 0;
+    padding: 2em 0;
 }
