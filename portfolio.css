@@ -58,7 +58,7 @@ body {
     transition: 0.3s;
 }
 
-/* Couleurs des icônes selon ton screen */
+/* Couleur icône Accueil */
 .nav-links li:nth-child(1) a i { color: var(--accent-home); }
 
 .nav-links a:hover {
@@ -68,7 +68,7 @@ body {
 
 /* Main Content Area */
 .main-content {
-    margin-left: 260px; /* Crucial pour éviter le chevauchement */
+    margin-left: 260px;
     width: calc(100% - 260px);
     min-height: 100vh;
 }
@@ -106,7 +106,7 @@ body {
 .btn.primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4); }
 .btn.secondary { border: 2px solid var(--primary); color: var(--primary); margin-left: 15px; }
 
-/* Grid Layouts */
+/* Skills Grid */
 .skills-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
@@ -150,5 +150,4 @@ footer { padding: 50px 0; text-align: center; color: var(--text-muted); border-t
     .nav-links { display: flex; gap: 20px; margin-top: 0; }
     .nav-links li { margin-bottom: 0; }
     .main-content { margin-left: 0; width: 100%; }
-    .hero h1 { font-size: 2.5rem; }
 }
