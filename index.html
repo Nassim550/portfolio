@@ -5,179 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nassim Reghoud | Portfolio SISR</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Nassim<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#experience">Stages</a></li>
-                <li><a href="#veille">Veille</a></li> <li><a href="#bts">BTS SIO</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+    <nav class="sidebar">
+        <div class="logo">Nassim<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home"><i class="fa-solid fa-house"></i> <span>Accueil</span></a></li>
+            <li><a href="#about"><i class="fa-solid fa-user"></i> <span>A Propos</span></a></li>
+            <li><a href="#experience"><i class="fa-solid fa-file-lines"></i> <span>Parcours</span></a></li>
+            <li><a href="#skills"><i class="fa-solid fa-table-columns"></i> <span>Compétences</span></a></li>
+            <li><a href="#veille"><i class="fa-solid fa-server"></i> <span>Veilles</span></a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope"></i> <span>Contact</span></a></li>
+        </ul>
     </nav>
 
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="status-badge">Disponible pour une alternance</div>
-                <h1>Nassim Reghoud</h1>
-                <p>Étudiant en <strong>BTS SIO option SISR</strong> à l'Institution Saint Aspais.</p>
-                <div class="hero-btns">
-                    <a href="CV de NASSIM REGHOUD.pdf" class="btn primary" download>Télécharger mon CV</a>
-                    <a href="#experience" class="btn secondary">Voir mes stages</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="title">À propos de moi</h2>
-            <div class="about-card">
-                <p>Passionné par les infrastructures réseaux et la cybersécurité, je me spécialise dans la gestion d'environnements critiques. Mon parcours m'a permis d'intervenir sur l'administration de parcs municipaux et la gestion de crises en DSI privée.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section bg-darker">
-        <div class="container">
-            <h2 class="title">Compétences SISR</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-icon">🖥️</div>
-                    <h3>Systèmes</h3>
-                    <p>Windows Server (AD, GPO), Linux, VMware vSphere.</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Réseaux</h3>
-                    <p>VLANs, Routage, Wi-Fi Alcatel-Lucent, WPA3.</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">⚡</div>
-                    <h3>Automatisation</h3>
-                    <p>PowerShell, Scripting de nettoyage et maintenance.</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">📊</div>
-                    <h3>Supervision</h3>
-                    <p>Zabbix (Monitoring prédictif), iTop (ITSM).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="title">Parcours Professionnel</h2>
-            <div class="timeline">
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <span class="date">Jan - Fév 2026</span>
-                        <h3>Groupe ADENES - DSI</h3>
+    <main class="main-content">
+        
+        <header id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="status-badge">Disponible pour une alternance</div>
+                    <h1>Nassim Reghoud</h1>
+                    <p>Étudiant en <strong>BTS SIO option SISR</strong> à l'Institution Saint Aspais.</p>
+                    <div class="hero-btns">
+                        <a href="CV de NASSIM REGHOUD.pdf" class="btn primary" download>Télécharger mon CV</a>
+                        <a href="#experience" class="btn secondary">Voir mes stages</a>
                     </div>
-                    <p class="role">Administrateur Systèmes & Réseaux (Stage)</p>
-                    <ul class="task-list">
-                        <li>Migration de l'ITSM vers <strong>iTop v2</strong> et supervision via <strong>Zabbix</strong>.</li>
-                        <li>Gestion de crise sur ferme <strong>RDS</strong> (PowerShell & Extension VCenter).</li>
-                        <li>Décommissionnement du serveur de fichiers FIC-5.</li>
-                        <li>Support N2 et migration Nextcloud sur parc macOS.</li>
-                    </ul>
-                </div>
-
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <span class="date">Mai - Juil 2025</span>
-                        <h3>Mairie de Moissy-Cramayel</h3>
-                    </div>
-                    <p class="role">Technicien Réseaux (Stage)</p>
-                    <ul class="task-list">
-                        <li>Audit, cartographie et mise à jour firmware des bornes <strong>Alcatel Lucent</strong>.</li>
-                        <li>Sécurisation via protocole <strong>WPA3</strong> et uniformisation des SSID.</li>
-                        <li>Tests de performance FTP et connectivité VLAN.</li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section id="veille" class="section bg-darker">
-        <div class="container">
-            <h2 class="title">Veille Technologique</h2>
-            <div class="about-card">
-                <h3>Thématique : La mutation de la cybersécurité en santé</h3>
-                <p>Ma veille porte sur l'évolution des menaces automatisées et les nouvelles obligations de résilience dans le secteur hospitalier.</p>
-                
-                <div class="skills-grid" style="margin-top: 30px;">
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="title">À propos de moi</h2>
+                <div class="about-card">
+                    <p>Passionné par les infrastructures réseaux et la cybersécurité, je me spécialise dans la gestion d'environnements critiques. Mon parcours m'a permis d'intervenir sur l'administration de parcs municipaux et la gestion de crises en DSI privée.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section bg-darker">
+            <div class="container">
+                <h2 class="title">Compétences SISR</h2>
+                <div class="skills-grid">
                     <div class="skill-item">
-                        <h4>Outils utilisés</h4>
-                        <ul style="text-align: left; color: var(--text-muted); padding-left: 20px;">
-                            <li><strong>Feedly</strong> (Flux RSS spécialisés)</li>
-                            <li><strong>CERT-FR / ANSSI</strong></li>
-                            <li><strong>Health-ISAC</strong> & <strong>e-santé.gouv.fr</strong></li>
+                        <div class="skill-icon">🖥️</div>
+                        <h3>Systèmes</h3>
+                        <p>Windows Server (AD, GPO), Linux, VMware vSphere.</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🌐</div>
+                        <h3>Réseaux</h3>
+                        <p>VLANs, Routage, Wi-Fi Alcatel-Lucent, WPA3.</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">⚡</div>
+                        <h3>Automatisation</h3>
+                        <p>PowerShell, Scripting de nettoyage et maintenance.</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">📊</div>
+                        <h3>Supervision</h3>
+                        <p>Zabbix (Monitoring prédictif), iTop (ITSM).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="title">Parcours Professionnel</h2>
+                <div class="timeline">
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <span class="date">Jan - Fév 2026</span>
+                            <h3>Groupe ADENES - DSI</h3>
+                        </div>
+                        <p class="role">Administrateur Systèmes & Réseaux (Stage)</p>
+                        <ul class="task-list">
+                            <li>Migration de l'ITSM vers <strong>iTop v2</strong> et supervision via <strong>Zabbix</strong>.</li>
+                            <li>Gestion de crise sur ferme <strong>RDS</strong> (PowerShell & Extension VCenter).</li>
+                            <li>Décommissionnement du serveur de fichiers FIC-5.</li>
+                            <li>Support N2 et migration Nextcloud sur parc macOS.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <span class="date">Mai - Juil 2025</span>
+                            <h3>Mairie de Moissy-Cramayel</h3>
+                        </div>
+                        <p class="role">Technicien Réseaux (Stage)</p>
+                        <ul class="task-list">
+                            <li>Audit, cartographie et mise à jour firmware des bornes <strong>Alcatel Lucent</strong>.</li>
+                            <li>Sécurisation via protocole <strong>WPA3</strong> et uniformisation des SSID.</li>
+                            <li>Tests de performance FTP et connectivité VLAN.</li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="skills-grid" style="margin-top: 40px;">
-                <div class="skill-item">
-                    <h4>Axe 1 : Violations de données</h4>
-                    <p>Bilan record en 2025 avec plus de 57 millions de patients touchés. Focus sur l'attaque Yale New Haven Health.</p>
+        <section id="veille" class="section bg-darker">
+            <div class="container">
+                <h2 class="title">Veille Technologique</h2>
+                <div class="about-card">
+                    <h3>Thématique : La mutation de la cybersécurité en santé</h3>
+                    <p>La veille technologique consiste à surveiller les évolutions techniques et les innovations[cite: 779, 780]. Ma thématique porte sur l'évolution des menaces automatisées et les nouvelles obligations de résilience dans le secteur hospitalier[cite: 790].</p>
+                    
+                    <div class="skills-grid" style="margin-top: 30px;">
+                        <div class="skill-item">
+                            <h4>Outils de veille</h4>
+                            <ul style="text-align: left; color: var(--text-muted); padding-left: 20px;">
+                                <li><strong>Feedly</strong> : Suivi de DSIH et ZDNet[cite: 785].</li>
+                                <li><strong>CERT-FR / ANSSI</strong> : Alertes sur les vulnérabilités exploitées[cite: 786].</li>
+                                <li><strong>Health-ISAC</strong> & <strong>e-santé.gouv.fr</strong>[cite: 787, 788].</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-item">
-                    <h4>Axe 2 : Cadre réglementaire</h4>
-                    <p>Mise en œuvre de la directive <strong>NIS 2</strong> et évolution du référentiel <strong>HDS V2</strong> pour l'hébergement.</p>
+
+                <div class="skills-grid" style="margin-top: 40px;">
+                    <div class="skill-item">
+                        <h4>Axe 1 : Violations de données</h4>
+                        <p>L'année 2025 a été marquée par une intensité record avec plus de 57 millions de patients touchés[cite: 792, 793, 795].</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Axe 2 : Cadre réglementaire</h4>
+                        <p>Mise en œuvre de la directive <strong>NIS 2</strong> et évolution du référentiel <strong>HDS V2</strong>[cite: 805, 806, 810, 812].</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Axe 3 : Menaces & IA</h4>
+                        <p>L'IA devient une arme avec 66% des responsables IT craignant les attaques automatisées[cite: 818, 819, 821, 822].</p>
+                    </div>
                 </div>
-                <div class="skill-item">
-                    <h4>Axe 3 : Menaces & IA</h4>
-                    <p>L'essor des cyberattaques automatisées par l'IA face au déploiement de <strong>Hospiconnect</strong> pour sécuriser les accès.</p>
-                </div>
+                
+                <center style="margin-top: 40px;">
+                    <a href="Veille Technologique.pdf" class="btn primary" download>Consulter le rapport complet</a>
+                </center>
             </div>
-            
-            <center style="margin-top: 40px;">
-                <a href="Veille Technologique.pdf" class="btn primary" download>Consulter le rapport complet</a>
-            </center>
-        </div>
-    </section>
+        </section>
 
-    <section id="bts" class="section">
-        <div class="container">
-            <h2 class="title">Référentiel BTS SIO</h2>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Domaine E4</th>
-                            <th>Réalisation concrète</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Gérer le patrimoine informatique</td><td>Migration iTop & Inventaire Lansweeper</td></tr>
-                        <tr><td>Répondre aux incidents</td><td>Résolution saturation ferme RDS</td></tr>
-                        <tr><td>Mettre à disposition des services</td><td>Déploiement WPA3 & VLANs Wi-Fi</td></tr>
-                    </tbody>
-                </table>
+        <section id="bts" class="section">
+            <div class="container">
+                <h2 class="title">Référentiel BTS SIO</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Domaine E4</th>
+                                <th>Réalisation concrète</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Gérer le patrimoine informatique</td><td>Migration iTop & Inventaire Lansweeper</td></tr>
+                            <tr><td>Répondre aux incidents</td><td>Résolution saturation ferme RDS</td></tr>
+                            <tr><td>Mettre à disposition des services</td><td>Déploiement WPA3 & VLANs Wi-Fi</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <center style="margin-top: 30px;">
+                    <a href="référentielSIO.pdf" class="btn secondary" download>Télécharger le tableau de synthèse</a>
+                </center>
             </div>
-            <center style="margin-top: 30px;">
-                <a href="référentielSIO.pdf" class="btn secondary" download>Télécharger le tableau de synthèse</a>
-            </center>
-        </div>
-    </section>
+        </section>
 
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2026 Nassim Reghoud - Étudiant BTS SIO</p>
-        </div>
-    </footer>
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 Nassim Reghoud - Étudiant BTS SIO</p>
+            </div>
+        </footer>
+
+    </main>
 
 </body>
 </html>
-
-
