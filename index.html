@@ -13,7 +13,7 @@
     <nav class="sidebar">
         <div class="logo">Nassim<span>.</span></div>
         <ul class="nav-links">
-            <li><a href="#home"><i class="fa-solid fa-house"></i> <span>Accueil</span></a></li>
+            <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> <span>Accueil</span></a></li>
             <li><a href="#about"><i class="fa-solid fa-user"></i> <span>A Propos</span></a></li>
             <li><a href="#experience"><i class="fa-solid fa-file-lines"></i> <span>Parcours</span></a></li>
             <li><a href="#skills"><i class="fa-solid fa-table-columns"></i> <span>Compétences</span></a></li>
@@ -26,8 +26,8 @@
     <main class="main-content">
         
         <header id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
+            <div class="container hero-wrapper">
+                <div class="hero-content reveal">
                     <div class="status-badge">Disponible pour une alternance</div>
                     <h1>Nassim Reghoud</h1>
                     <p>Étudiant en <strong>BTS SIO option SISR</strong> à l'Institution Saint Aspais.</p>
@@ -36,11 +36,14 @@
                         <a href="#experience" class="btn secondary">Voir mes stages</a>
                     </div>
                 </div>
+                <div class="hero-image reveal">
+                    <img src="https://via.placeholder.com/250" alt="Nassim Reghoud" id="profile-pic">
+                    </div>
             </div>
         </header>
 
         <section id="about" class="section">
-            <div class="container">
+            <div class="container reveal">
                 <h2 class="title">À propos de moi</h2>
                 <div class="about-card">
                     <p>Passionné par les infrastructures réseaux et la cybersécurité, je me spécialise dans la gestion d'environnements critiques. Mon parcours m'a permis d'intervenir sur l'administration de parcs municipaux et la gestion de crises en DSI privée.</p>
@@ -50,9 +53,9 @@
 
         <section id="experience" class="section">
             <div class="container">
-                <h2 class="title">Parcours Professionnel</h2>
+                <h2 class="title reveal">Parcours Professionnel</h2>
                 <div class="timeline">
-                    <div class="exp-card">
+                    <div class="exp-card reveal">
                         <div class="exp-header">
                             <span class="date">Jan - Fév 2026</span>
                             <h3>Groupe ADENES - DSI</h3>
@@ -70,7 +73,7 @@
                         </div>
                     </div>
 
-                    <div class="exp-card">
+                    <div class="exp-card reveal">
                         <div class="exp-header">
                             <span class="date">Mai - Juil 2025</span>
                             <h3>Mairie de Moissy-Cramayel</h3>
@@ -92,24 +95,24 @@
 
         <section id="skills" class="section bg-darker">
             <div class="container">
-                <h2 class="title">Compétences SISR</h2>
+                <h2 class="title reveal">Compétences SISR</h2>
                 <div class="skills-grid">
-                    <div class="skill-item">
+                    <div class="skill-item reveal">
                         <div class="skill-icon"><i class="fa-solid fa-desktop"></i></div>
                         <h3>Systèmes</h3>
                         <p>Windows Server (AD, GPO), Linux, VMware vSphere.</p>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal">
                         <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
                         <h3>Réseaux</h3>
                         <p>VLANs, Routage, Wi-Fi Alcatel-Lucent, WPA3.</p>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal">
                         <div class="skill-icon"><i class="fa-solid fa-bolt"></i></div>
                         <h3>Automatisation</h3>
                         <p>PowerShell, Scripting de nettoyage et maintenance.</p>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal">
                         <div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
                         <h3>Supervision</h3>
                         <p>Zabbix (Monitoring prédictif), iTop (ITSM).</p>
@@ -120,12 +123,10 @@
 
         <section id="certifications" class="section">
             <div class="container">
-                <h2 class="title">Certifications</h2>
+                <h2 class="title reveal">Certifications</h2>
                 <div class="skills-grid">
-                    <div class="skill-item cert-card">
-                        <div class="cert-icon">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
+                    <div class="skill-item cert-card reveal">
+                        <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
                         <h3>MOOC SecNumacadémie</h3>
                         <p class="cert-org">ANSSI | Octobre 2024</p>
                         <p class="cert-desc">Cybersécurité, Sécurité de l'information, Sensibilisation à la sécurité.</p>
@@ -133,21 +134,17 @@
                             <a href="Attestation MOOC Nassim REGHOUD.pdf" class="btn secondary small" download><i class="fa-solid fa-file-pdf"></i> Voir l'attestation</a>
                         </div>
                     </div>
-                    <div class="skill-item cert-card">
-                        <div class="cert-icon">
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
+                    <div class="skill-item cert-card reveal">
+                        <div class="cert-icon"><i class="fa-solid fa-lock"></i></div>
                         <h3>Introduction à la Cybersécurité</h3>
                         <p class="cert-org">Cisco | Décembre 2024</p>
                         <p class="cert-desc">Cybersécurité, Sécurité des réseaux, Analyse des vulnérabilités.</p>
                         <div class="cert-btn-container">
-                            <a href="Certification Introduction à la Cybersécurité.pdf" class="btn secondary small" download><i class="fa-solid fa-file-pdf"></i> Voir le certificat</a>
+                            <a href="Certificat Introduction à la Cybersécurité.pdf" class="btn secondary small" download><i class="fa-solid fa-file-pdf"></i> Voir le certificat</a>
                         </div>
                     </div>
-                    <div class="skill-item cert-card">
-                        <div class="cert-icon">
-                            <i class="fa-brands fa-linux"></i>
-                        </div>
+                    <div class="skill-item cert-card reveal">
+                        <div class="cert-icon"><i class="fa-brands fa-linux"></i></div>
                         <h3>NDG Linux Unhatched</h3>
                         <p class="cert-org">Cisco | Septembre 2025</p>
                         <p class="cert-desc">Linux, Ligne de commande (CLI), Administration Système.</p>
@@ -161,8 +158,8 @@
 
         <section id="veille" class="section bg-darker">
             <div class="container">
-                <h2 class="title">Veille Technologique</h2>
-                <div class="about-card">
+                <h2 class="title reveal">Veille Technologique</h2>
+                <div class="about-card reveal">
                     <h3>Thématique : La mutation de la cybersécurité en santé</h3>
                     <p>La veille technologique consiste à surveiller les évolutions techniques et les innovations. Cette démarche est vitale pour passer d'une posture purement défensive à une véritable stratégie de cyber-résilience.</p>
                     
@@ -179,28 +176,28 @@
                 </div>
 
                 <div class="skills-grid" style="margin-top: 40px;">
-                    <div class="skill-item">
+                    <div class="skill-item reveal">
                         <h4>Axe 1 : Violations de données</h4>
                         <p>L'année 2025 a été marquée par une intensité record avec plus de 57 millions de patients touchés. Le coût moyen d'une compromission atteint 7,42 millions de dollars par incident.</p>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal">
                         <h4>Axe 2 : Cadre réglementaire</h4>
                         <p>Mise en œuvre de la directive européenne <strong>NIS 2</strong> et évolution du référentiel <strong>HDS V2</strong> pour renforcer l'authentification multifacteur.</p>
                     </div>
-                    <div class="skill-item">
+                    <div class="skill-item reveal">
                         <h4>Axe 3 : Menaces & IA</h4>
                         <p>L'IA devient une arme avec 66% des responsables IT craignant les attaques automatisées, parallèlement à la généralisation du dispositif <strong>Hospiconnect</strong>.</p>
                     </div>
                 </div>
                 
-                <center style="margin-top: 40px;">
+                <center style="margin-top: 40px;" class="reveal">
                     <a href="Veille Technologique.pdf" class="btn primary" download>Consulter le rapport complet</a>
                 </center>
             </div>
         </section>
 
         <section id="bts" class="section">
-            <div class="container">
+            <div class="container reveal">
                 <h2 class="title">Référentiel BTS SIO</h2>
                 <div class="table-container">
                     <table>
@@ -224,7 +221,7 @@
         </section>
 
         <section id="contact" class="section bg-darker">
-            <div class="container">
+            <div class="container reveal">
                 <h2 class="title">Me Contacter</h2>
                 <div class="contact-content">
                     <div class="contact-info">
@@ -272,5 +269,47 @@
 
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Animation d'apparition au scroll (Fade-in)
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+                
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger une fois au chargement
+
+            // 2. Mise en surbrillance automatique du menu
+            const sections = document.querySelectorAll('section, header');
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 250)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
