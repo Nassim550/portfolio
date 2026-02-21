@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="portfolio.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
 
@@ -26,19 +27,20 @@
     <main class="main-content">
         
         <header id="home" class="hero">
+            <div id="particles-js"></div>
+            
             <div class="container hero-wrapper">
                 <div class="hero-content reveal">
                     <div class="status-badge">Disponible pour une alternance</div>
                     <h1>Nassim Reghoud</h1>
-                    <p>Étudiant en <strong>BTS SIO option SISR</strong> à l'Institution Saint Aspais.</p>
+                    <div class="typewriter-container">
+                        <span id="typewriter-text"></span><span class="cursor"></span>
+                    </div>
                     <div class="hero-btns">
                         <a href="CV de NASSIM REGHOUD.pdf" class="btn primary" download>Télécharger mon CV</a>
                         <a href="#experience" class="btn secondary">Voir mes stages</a>
                     </div>
                 </div>
-                <div class="hero-image reveal">
-                    <img src="https://via.placeholder.com/250" alt="Nassim Reghoud" id="profile-pic">
-                    </div>
             </div>
         </header>
 
@@ -140,7 +142,7 @@
                         <p class="cert-org">Cisco | Décembre 2024</p>
                         <p class="cert-desc">Cybersécurité, Sécurité des réseaux, Analyse des vulnérabilités.</p>
                         <div class="cert-btn-container">
-                            <a href="Certificat Introduction à la Cybersécurité.pdf" class="btn secondary small" download><i class="fa-solid fa-file-pdf"></i> Voir le certificat</a>
+                            <a href="Certification Introduction à la Cybersécurité.pdf" class="btn secondary small" download><i class="fa-solid fa-file-pdf"></i> Voir le certificat</a>
                         </div>
                     </div>
                     <div class="skill-item cert-card reveal">
@@ -271,13 +273,73 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Animation d'apparition au scroll (Fade-in)
-            const reveals = document.querySelectorAll('.reveal');
             
+            /* =========================================
+               1. EFFET MACHINE À ÉCRIRE
+               ========================================= */
+            const textToType = "> Administrateur Systèmes, Réseaux & Sécurité_";
+            const typewriterElement = document.getElementById('typewriter-text');
+            let charIndex = 0;
+
+            function typeWriter() {
+                if (charIndex < textToType.length) {
+                    typewriterElement.innerHTML += textToType.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeWriter, 50); // Vitesse de frappe (50ms)
+                }
+            }
+            // Démarrer l'animation après un petit délai
+            setTimeout(typeWriter, 500);
+
+            /* =========================================
+               2. CONFIGURATION PARTICLES.JS (Réseau)
+               ========================================= */
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#94a3b8" }, // Couleur de ton thème primaire
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.5, "random": false },
+                    "size": { "value": 3, "random": true },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#94a3b8",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2, // Vitesse lente et fluide
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": { "enable": true, "mode": "grab" }, // Les points s'accrochent à la souris
+                        "onclick": { "enable": true, "mode": "push" }, // Ajoute des points au clic
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+                        "push": { "particles_nb": 4 }
+                    }
+                },
+                "retina_detect": true
+            });
+
+            /* =========================================
+               3. ANIMATION SCROLL ET MENU
+               ========================================= */
+            const reveals = document.querySelectorAll('.reveal');
             const revealOnScroll = () => {
                 const windowHeight = window.innerHeight;
                 const elementVisible = 100;
-                
                 reveals.forEach((reveal) => {
                     const elementTop = reveal.getBoundingClientRect().top;
                     if (elementTop < windowHeight - elementVisible) {
@@ -286,12 +348,10 @@
                 });
             };
             window.addEventListener('scroll', revealOnScroll);
-            revealOnScroll(); // Trigger une fois au chargement
+            revealOnScroll();
 
-            // 2. Mise en surbrillance automatique du menu
             const sections = document.querySelectorAll('section, header');
             const navLinks = document.querySelectorAll('.nav-links a');
-
             window.addEventListener('scroll', () => {
                 let current = '';
                 sections.forEach(section => {
@@ -301,7 +361,6 @@
                         current = section.getAttribute('id');
                     }
                 });
-
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${current}`) {
