@@ -226,28 +226,26 @@
         <section id="contact" class="section bg-darker">
             <div class="container reveal">
                 <h2 class="title">Me Contacter</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <a href="mailto:nassimreghoud.pro@gmail.com" class="contact-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <h3>Email</h3>
-                            <p>nassimreghoud.pro<br>@gmail.com</p>
-                        </a>
-                        <a href="tel:+33621526848" class="contact-item">
-                            <i class="fa-solid fa-phone"></i>
-                            <h3>Téléphone</h3>
-                            <p>06 21 52 68 48</p>
-                        </a>
-                        <a href="https://www.linkedin.com/in/nassim-reghoud-790428344" target="_blank" class="contact-item">
-                            <i class="fa-brands fa-linkedin"></i>
-                            <h3>LinkedIn</h3>
-                            <p>Mon Profil Pro</p>
-                        </a>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <h3>Localisation</h3>
-                            <p>Moissy-Cramayel<br>Île-de-France</p>
-                        </div>
+                <div class="contact-grid">
+                    <a href="mailto:nassimreghoud.pro@gmail.com" class="contact-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>nassimreghoud.pro<br>@gmail.com</p>
+                    </a>
+                    <a href="tel:+33621526848" class="contact-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>Téléphone</h3>
+                        <p>06 21 52 68 48</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nassim-reghoud-790428344" target="_blank" class="contact-card">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Mon Profil Pro</p>
+                    </a>
+                    <div class="contact-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Localisation</h3>
+                        <p>Moissy-Cramayel<br>Île-de-France</p>
                     </div>
                 </div>
             </div>
@@ -265,7 +263,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             
             /* =========================================
-               1. EFFET MACHINE À ÉCRIRE (MODIFIÉ)
+               1. EFFET MACHINE À ÉCRIRE
                ========================================= */
             const textToType = "> Etudiant en BTS SIO option SISR_";
             const typewriterElement = document.getElementById('typewriter-text');
@@ -275,53 +273,54 @@
                 if (charIndex < textToType.length) {
                     typewriterElement.innerHTML += textToType.charAt(charIndex);
                     charIndex++;
-                    setTimeout(typeWriter, 50); // Vitesse de frappe (50ms)
+                    setTimeout(typeWriter, 50);
                 }
             }
-            // Démarrer l'animation après un petit délai
             setTimeout(typeWriter, 500);
 
             /* =========================================
-               2. CONFIGURATION PARTICLES.JS (Réseau)
+               2. CONFIGURATION PARTICLES.JS
                ========================================= */
-            particlesJS("particles-js", {
-                "particles": {
-                    "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-                    "color": { "value": "#94a3b8" }, // Couleur de ton thème primaire
-                    "shape": { "type": "circle" },
-                    "opacity": { "value": 0.5, "random": false },
-                    "size": { "value": 3, "random": true },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#94a3b8",
-                        "opacity": 0.4,
-                        "width": 1
+            if(typeof particlesJS !== 'undefined') {
+                particlesJS("particles-js", {
+                    "particles": {
+                        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                        "color": { "value": "#94a3b8" },
+                        "shape": { "type": "circle" },
+                        "opacity": { "value": 0.5, "random": false },
+                        "size": { "value": 3, "random": true },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#94a3b8",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 2,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false
+                        }
                     },
-                    "move": {
-                        "enable": true,
-                        "speed": 2, // Vitesse lente et fluide
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": { "enable": true, "mode": "grab" }, // Les points s'accrochent à la souris
-                        "onclick": { "enable": true, "mode": "push" }, // Ajoute des points au clic
-                        "resize": true
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": { "enable": true, "mode": "grab" },
+                            "onclick": { "enable": true, "mode": "push" },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+                            "push": { "particles_nb": 4 }
+                        }
                     },
-                    "modes": {
-                        "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
-                        "push": { "particles_nb": 4 }
-                    }
-                },
-                "retina_detect": true
-            });
+                    "retina_detect": true
+                });
+            }
 
             /* =========================================
                3. ANIMATION SCROLL ET MENU
