@@ -170,6 +170,7 @@ body {
 
 .skill-item:hover { border-color: var(--primary); transform: translateY(-5px); }
 .skill-item h3, .skill-item h4 { color: var(--text-white); margin-bottom: 10px; }
+.skill-icon { font-size: 2rem; color: var(--text-white); margin-bottom: 15px; } /* J'ai rajouté ce petit bout pour les icônes */
 
 /* Experience Cards */
 .exp-card { 
