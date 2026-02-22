@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique | Nassim Reghoud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        /* Quelques ajustements spécifiques pour cette page de lecture */
+        .veille-header {
+            position: relative;
+            padding: 100px 0 50px 0;
+            text-align: center;
+            background: radial-gradient(circle at top right, #1e293b, var(--bg-dark));
+            border-bottom: 1px solid #334155;
+            overflow: hidden;
+        }
+        .veille-header #particles-js { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1; opacity: 0.5; }
+        .veille-header .container { position: relative; z-index: 2; }
+        .veille-content { padding: 60px 0; max-width: 800px; margin: 0 auto; }
+        .veille-article { margin-bottom: 50px; }
+        .veille-article h3 { color: var(--text-white); font-size: 1.8rem; margin-bottom: 15px; display: flex; align-items: center; gap: 15px; }
+        .veille-article h3 i { color: var(--primary); font-size: 2rem; }
+        .veille-meta { color: var(--primary); font-weight: 600; margin-bottom: 20px; font-size: 0.95rem; }
+        .veille-article p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; text-align: justify; }
+        .top-bar { padding: 20px; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #334155; }
+    </style>
+</head>
+<body style="display: block;"> <div class="top-bar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo" style="font-size: 1.5rem; font-weight: 700;">Nassim<span style="color: var(--primary);">.</span></div>
+            <a href="index.html" class="btn secondary small"><i class="fa-solid fa-arrow-left"></i> Retour au portfolio</a>
+        </div>
+    </div>
+
+    <header class="veille-header">
+        <div id="particles-js"></div>
+        <div class="container reveal">
+            <h1 class="title" style="margin-bottom: 20px; font-size: 3rem;">Veille Technologique</h1>
+            <p style="color: var(--primary); font-size: 1.2rem; font-weight: 600;">La mutation de la cybersécurité en santé : de la menace aux obligations de résilience.</p>
+        </div>
+    </header>
+
+    <main class="veille-content container">
+        
+        <div class="about-card reveal" style="margin-bottom: 60px;">
+            <h3 style="color: var(--text-white); margin-bottom: 15px;">Démarche & Outils</h3>
+            <p style="color: var(--text-muted); text-align: justify;">La veille technologique consiste à surveiller les évolutions techniques et les innovations. Pour un futur administrateur SISR, cette démarche est vitale pour anticiper les cybermenaces et adapter les infrastructures. Ma veille s'appuie exclusivement sur des sources institutionnelles et des cabinets d'experts (via l'agrégateur Feedly) pour garantir une information technique fiable : <strong>CERT-FR (ANSSI)</strong>, <strong>Wavestone</strong> et <strong>Relyens</strong>.</p>
+        </div>
+
+        <article class="veille-article reveal">
+            <h3><i class="fa-solid fa-file-shield"></i> L'état de la menace informatique en santé</h3>
+            <div class="veille-meta">Source : Rapport de l'ANSSI / CERT-FR | Année : 2024</div>
+            <p>L'Agence Nationale de la Sécurité des Systèmes d'Information (ANSSI) dresse un constat technique alarmant : les établissements de santé sont des cibles prioritaires pour les cybercriminels, principalement via des attaques par rançongiciel (ransomware). Le rapport souligne que les attaquants exploitent des vulnérabilités connues mais non corrigées sur des équipements exposés sur Internet (pare-feu, VPN).</p>
+            <p>De plus, le CERT-FR met en lumière une faiblesse structurelle du milieu hospitalier : <strong>entre 20 % et 60 % des équipements biomédicaux connectés fonctionnent sur des systèmes d'exploitation obsolètes (Legacy)</strong>, rendant leur sécurisation extrêmement complexe. L'enjeu n'est plus seulement la protection du réseau bureautique, mais bien celle du réseau médical critique.</p>
+            <a href="https://www.cert.ssi.gouv.fr/uploads/CERTFR-2024-CTI-010.pdf" target="_blank" class="btn primary small" style="margin-top: 10px;"><i class="fa-solid fa-book-open"></i> Lire le rapport officiel du CERT-FR</a>
+        </article>
+
+        <hr style="border: 0; border-top: 1px solid #334155; margin: 40px 0;" class="reveal">
+
+        <article class="veille-article reveal">
+            <h3><i class="fa-solid fa-scale-balanced"></i> Le virage réglementaire avec la directive NIS 2</h3>
+            <div class="veille-meta">Source : Relyens (Management des risques) | Année : 2025</div>
+            <p>Face à l'augmentation des attaques, la réponse européenne s'est traduite par la directive NIS 2, qui change radicalement la donne pour les DSI des hôpitaux. Contrairement aux anciennes recommandations, NIS 2 impose des obligations de résultats. Les établissements sanitaires sont désormais considérés comme des "Entités Essentielles" (EE).</p>
+            <p>Ils doivent obligatoirement mettre en place une gouvernance stricte de la sécurité, sécuriser l'ensemble de leur chaîne d'approvisionnement (y compris leurs prestataires informatiques) et <strong>signaler tout incident de sécurité majeur aux autorités dans un délai très court de 24 heures</strong> pour une alerte précoce. La cybersécurité en santé devient une contrainte légale avec des sanctions sévères en cas de négligence.</p>
+            <a href="https://www.relyens.eu/fr/ressources/blog/directive-nis2" target="_blank" class="btn primary small" style="margin-top: 10px;"><i class="fa-solid fa-book-open"></i> Lire l'analyse Relyens</a>
+        </article>
+
+        <hr style="border: 0; border-top: 1px solid #334155; margin: 40px 0;" class="reveal">
+
+        <article class="veille-article reveal">
+            <h3><i class="fa-solid fa-cloud"></i> La sécurisation du Cloud et la certification HDS v2</h3>
+            <div class="veille-meta">Source : Cabinet d'expertise Wavestone | Année : Mai 2025</div>
+            <p>La numérisation des parcours de soins pousse les établissements à externaliser leurs données vers le Cloud. Pour encadrer ce mouvement, le référentiel HDS (Hébergeur de Données de Santé) a évolué vers sa version 2.0, devenant obligatoire pour tous les hébergeurs d'ici mai 2026.</p>
+            <p>L'analyse de Wavestone montre que cette nouvelle version s'aligne étroitement sur la norme internationale ISO 27001, mais y ajoute des exigences techniques lourdes. Les hébergeurs doivent désormais <strong>imposer une authentification multifacteur (MFA) systématique, garantir un chiffrement de bout en bout</strong>, et surtout, répondre à de nouvelles exigences de souveraineté numérique pour s'assurer que les données des patients ne soient pas soumises à des lois extra-européennes.</p>
+            <a href="https://www.riskinsight-wavestone.com/2025/05/evolution-du-referentiel-hds-vers-une-securite-et-une-souverainete-renforcees/" target="_blank" class="btn primary small" style="margin-top: 10px;"><i class="fa-solid fa-book-open"></i> Lire le rapport Wavestone</a>
+        </article>
+
+        <div class="about-card reveal" style="margin-top: 60px; background-color: #253347; border-color: var(--primary);">
+            <h3 style="color: var(--text-white); margin-bottom: 15px;">Bilan</h3>
+            <p style="color: var(--text-muted); margin-bottom: 0; text-align: justify;">Cette veille démontre que la cybersécurité en santé est passée d'une problématique d'administration réseau classique à un enjeu de résilience critique. L'ingénieur système et réseau de demain ne doit plus se contenter de maintenir les serveurs en ligne (MCO). Il doit concevoir des architectures capables de répondre aux exigences de la directive NIS 2, d'isoler les équipements médicaux obsolètes signalés par le CERT-FR, et de s'intégrer dans des environnements Cloud hautement sécurisés et certifiés HDS v2.</p>
+        </div>
+
+    </main>
+
+    <footer style="margin-top: 50px;">
+        <div class="container">
+            <p>&copy; 2026 Nassim Reghoud - Étudiant BTS SIO</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animation d'apparition
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll();
+
+            // Particules d'arrière-plan
+            if(typeof particlesJS !== 'undefined') {
+                particlesJS("particles-js", {
+                    "particles": {
+                        "number": { "value": 40, "density": { "enable": true, "value_area": 800 } },
+                        "color": { "value": "#94a3b8" },
+                        "shape": { "type": "circle" },
+                        "opacity": { "value": 0.3, "random": false },
+                        "size": { "value": 3, "random": true },
+                        "line_linked": { "enable": true, "distance": 150, "color": "#94a3b8", "opacity": 0.2, "width": 1 },
+                        "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": { "onhover": { "enable": false }, "onclick": { "enable": false }, "resize": true }
+                    },
+                    "retina_detect": true
+                });
+            }
+        });
+    </script>
+</body>
+</html>
