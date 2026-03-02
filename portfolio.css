@@ -23,7 +23,7 @@ body {
 }
 
 /* =========================================
-   SIDEBAR (CORRIGÉE POUR TOUT AFFICHER)
+   SIDEBAR
    ========================================= */
 .sidebar {
     width: 260px;
@@ -32,7 +32,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    padding: 30px 25px; /* Padding haut réduit pour gagner de la place */
+    padding: 30px 25px; 
     display: flex;
     flex-direction: column;
     z-index: 1000;
@@ -40,12 +40,12 @@ body {
     overflow-y: auto;
 }
 
-.sidebar::-webkit-scrollbar { display: none; } /* Cache la barre moche */
+.sidebar::-webkit-scrollbar { display: none; }
 
 .sidebar .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 30px; /* Réduit pour laisser de la place aux onglets */
+    margin-bottom: 30px; 
     color: var(--text-white);
 }
 
@@ -53,7 +53,7 @@ body {
 
 .nav-links { list-style: none; padding-bottom: 20px; }
 
-.nav-links li { margin-bottom: 15px; } /* Marge réduite pour resserrer les onglets */
+.nav-links li { margin-bottom: 15px; } 
 
 .nav-links a {
     text-decoration: none;
@@ -136,6 +136,53 @@ body {
 .date { color: var(--primary); font-weight: 700; }
 .task-list { padding-left: 20px; color: var(--text-muted); margin-top: 10px; }
 
+/* =========================================
+   PROJECT CARD (M2L)
+   ========================================= */
+.project-card {
+    background: var(--card-bg); 
+    padding: 40px; 
+    border-radius: 16px; 
+    border: 1px solid #334155;
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s ease;
+}
+.project-card:hover { 
+    border-color: var(--primary); 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+}
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.project-header h3 {
+    font-size: 1.5rem;
+    color: var(--text-white);
+}
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+.tech-badge {
+    background: rgba(148, 163, 184, 0.1); 
+    color: var(--primary); 
+    padding: 6px 14px; 
+    border-radius: 20px; 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    border: 1px solid var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
 /* Table */
 .table-container { overflow-x: auto; background: var(--card-bg); border-radius: 12px; margin-top: 20px; border: 1px solid #334155; }
 table { width: 100%; border-collapse: collapse; }
@@ -151,7 +198,7 @@ th { color: var(--text-white); font-size: 0.9rem; text-transform: uppercase; }
 .cert-btn-container .btn { width: 100%; text-align: center; justify-content: center; }
 
 /* =========================================
-   CONTACT SECTION (CORRIGÉE EN CARTES)
+   CONTACT SECTION
    ========================================= */
 .contact-grid {
     display: grid;
@@ -167,12 +214,12 @@ th { color: var(--text-white); font-size: 0.9rem; text-transform: uppercase; }
     border: 1px solid #334155;
     text-align: center;
     transition: all 0.3s ease;
-    text-decoration: none !important; /* Force la disparition du soulignement */
+    text-decoration: none !important; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--text-white) !important; /* Force le texte en blanc */
+    color: var(--text-white) !important; 
 }
 
 .contact-card h3 {
@@ -194,7 +241,6 @@ th { color: var(--text-white); font-size: 0.9rem; text-transform: uppercase; }
     transition: 0.3s;
 }
 
-/* Survol uniquement pour les cartes cliquables */
 a.contact-card:hover {
     border-color: var(--primary);
     transform: translateY(-10px);
