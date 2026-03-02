@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet M2L | Nassim Reghoud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="logo">Nassim<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html#home"><i class="fa-solid fa-house"></i> <span>Accueil</span></a></li>
+            <li><a href="index.html#experience"><i class="fa-solid fa-file-lines"></i> <span>Parcours</span></a></li>
+            <li><a href="index.html#projects" class="active"><i class="fa-solid fa-network-wired"></i> <span>Projet M2L</span></a></li>
+            <li><a href="index.html#skills"><i class="fa-solid fa-table-columns"></i> <span>Compétences</span></a></li>
+            <li><a href="index.html#contact"><i class="fa-solid fa-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        
+        <section class="section" style="padding-top: 60px;">
+            <div class="container reveal active">
+                <a href="index.html#projects" class="btn secondary small" style="margin-bottom: 30px;"><i class="fa-solid fa-arrow-left"></i> Retour au portfolio</a>
+                
+                <h2 class="title" style="text-align: left; margin-bottom: 20px;">Maison des Ligues (M2L)</h2>
+                <div class="status-badge" style="margin-bottom: 40px;">Atelier de Professionnalisation (Travail d'équipe)</div>
+
+                <div class="about-card" style="margin-bottom: 40px;">
+                    <h3><i class="fa-solid fa-users-gear" style="color: var(--primary); margin-right: 10px;"></i> Contexte & Méthodologie</h3>
+                    <p style="margin-top: 15px; color: var(--text-muted);">
+                        Ce projet est une simulation d'une activité professionnelle réelle. L'objectif était de reproduire le contexte d'une entreprise nécessitant une infrastructure robuste[cite: 4, 5]. 
+                    </p>
+                    <ul class="task-list" style="margin-top: 15px;">
+                        <li><strong>Organisation :</strong> Travail en équipe de 3 étudiants en grande autonomie[cite: 9, 10].</li>
+                        <li><strong>Gestion de projet :</strong> Utilisation de <strong>Trello</strong>, définition d'objectifs hebdomadaires, et réalisation de procédures d'auto-évaluation.</li>
+                        <li><strong>Livrables :</strong> Rédaction de procédures de tests et dépôt de l'ensemble de la documentation technique sur Teams.</li>
+                    </ul>
+                </div>
+
+                <div class="about-card" style="margin-bottom: 40px; border-left: 4px solid var(--primary);">
+                    <h3><i class="fa-solid fa-server" style="color: var(--primary); margin-right: 10px;"></i> Architecture Réseau & Systèmes</h3>
+                    <p style="margin-top: 15px; color: var(--text-muted);">
+                        L'infrastructure est pensée pour héberger les ressources de la M2L et d'une trentaine de ligues sportives (Karaté, Athlétisme, Yoga, etc.), nécessitant sécurité, segmentation et haute disponibilité[cite: 87, 108].
+                    </p>
+                    
+                    <div class="tech-stack" style="margin-top: 20px;">
+                        <span class="tech-badge"><i class="fa-solid fa-shield-halved"></i> pfSense</span>
+                        <span class="tech-badge"><i class="fa-solid fa-network-wired"></i> 7 VLANs</span>
+                        <span class="tech-badge"><i class="fa-solid fa-sitemap"></i> AD / LDAP</span>
+                        <span class="tech-badge"><i class="fa-solid fa-cloud"></i> HAProxy & Nextcloud</span>
+                        <span class="tech-badge"><i class="fa-solid fa-chart-line"></i> Zabbix & GLPI</span>
+                    </div>
+
+                    <div class="skills-grid" style="margin-top: 30px; grid-template-columns: 1fr 1fr;">
+                        <div class="skill-item" style="padding: 25px; border: none; background: rgba(15, 23, 42, 0.5);">
+                            <h4 style="color: var(--text-white); margin-bottom: 10px;">Réseau & Sécurité</h4>
+                            <ul class="task-list" style="font-size: 0.95rem;">
+                                <li>Séparation logique en <strong>7 VLANs</strong> (Informatique, Gestion, Ligues, VoIP, etc.).</li>
+                                <li>Mise en place d'un <strong>pare-feu pfSense principal</strong> avec création d'une <strong>DMZ publique</strong> (services accessibles depuis Internet) et d'une <strong>DMZ privée</strong>[cite: 90, 141, 142].</li>
+                                <li>Redondance des routeurs (HSRP) et activation du Spanning-Tree pour la haute disponibilité[cite: 112, 138].</li>
+                                <li>Administration à distance des équipements sécurisée via <strong>SSH</strong>[cite: 116, 156].</li>
+                            </ul>
+                        </div>
+                        <div class="skill-item" style="padding: 25px; border: none; background: rgba(15, 23, 42, 0.5);">
+                            <h4 style="color: var(--text-white); margin-bottom: 10px;">Services & Supervision</h4>
+                            <ul class="task-list" style="font-size: 0.95rem;">
+                                <li>Domaine <i>M2L.local</i> avec contrôleurs <strong>Active Directory / DNS / DHCP redondés</strong>.</li>
+                                <li>Déploiement de serveurs Web, d'un reverse proxy <strong>HAProxy</strong> et d'un serveur FTP en DMZ.</li>
+                                <li>Mise en place d'un serveur de téléphonie <strong>Asterisk (VoIP)</strong> et d'un Cloud privé <strong>Nextcloud</strong>[cite: 122, 123].</li>
+                                <li>Supervision proactive avec <strong>Zabbix</strong> et gestion de parc via <strong>GLPI</strong>[cite: 120, 121, 154].</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card" style="margin-bottom: 40px;">
+                    <h3><i class="fa-solid fa-list-check" style="color: var(--primary); margin-right: 10px;"></i> Compétences SIO validées</h3>
+                    <p style="margin-top: 15px; color: var(--text-muted);">Ce projet couvre de manière exhaustive les compétences du référentiel BTS SIO SISR:</p>
+                    <ul class="task-list" style="margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <li>Concevoir une solution d'infrastructure réseau.</li>
+                        <li>Maquetter et prototyper une solution d'infrastructure.</li>
+                        <li>Installer, tester et déployer une solution d'infrastructure.</li>
+                        <li>Administrer sur site et à distance des éléments.</li>
+                        <li>Exploiter, dépanner et superviser une infrastructure.</li>
+                        <li>Rédiger ou mettre à jour la documentation technique.</li>
+                    </ul>
+                </div>
+
+                <h3 class="title" style="font-size: 1.8rem; text-align: left; margin-top: 50px; margin-bottom: 30px;">Documents du Projet</h3>
+                <div class="skills-grid">
+                    <div class="skill-item cert-card reveal active">
+                        <div class="cert-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <h3>Cahier des charges</h3>
+                        <p class="cert-desc">Architecture détaillée, plans d'adressage IP, topologie VLAN et règles de routage.</p>
+                        <div class="cert-btn-container">
+                            <a href="Cahier_des_charges_de_la_M2L.pdf" class="btn secondary small" download><i class="fa-solid fa-download"></i> Télécharger</a>
+                        </div>
+                    </div>
+                    <div class="skill-item cert-card reveal active">
+                        <div class="cert-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <h3>Présentation AP</h3>
+                        <p class="cert-desc">Objectifs pédagogiques, contraintes de l'atelier et méthodologie de travail en équipe.</p>
+                        <div class="cert-btn-container">
+                            <a href="0.Présentation_AP.pdf" class="btn secondary small" download><i class="fa-solid fa-download"></i> Télécharger</a>
+                        </div>
+                    </div>
+                    <div class="skill-item cert-card reveal active">
+                        <div class="cert-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <h3>Grille de Compétences</h3>
+                        <p class="cert-desc">Tableau de correspondance complet avec le référentiel officiel du BTS SIO.</p>
+                        <div class="cert-btn-container">
+                            <a href="Compétences_à_couvrir.pdf" class="btn secondary small" download><i class="fa-solid fa-download"></i> Télécharger</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 Nassim Reghoud - Étudiant BTS SIO</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Lancer une fois au chargement
+        });
+    </script>
+</body>
+</html>
