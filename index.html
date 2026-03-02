@@ -17,6 +17,7 @@
             <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> <span>Accueil</span></a></li>
             <li><a href="#about"><i class="fa-solid fa-user"></i> <span>A Propos</span></a></li>
             <li><a href="#experience"><i class="fa-solid fa-file-lines"></i> <span>Parcours</span></a></li>
+            <li><a href="#projects"><i class="fa-solid fa-network-wired"></i> <span>Projets AP</span></a></li>
             <li><a href="#skills"><i class="fa-solid fa-table-columns"></i> <span>Compétences</span></a></li>
             <li><a href="#certifications"><i class="fa-solid fa-certificate"></i> <span>Certifications</span></a></li>
             <li><a href="#veille"><i class="fa-solid fa-server"></i> <span>Veilles</span></a></li>
@@ -96,7 +97,43 @@
             </div>
         </section>
 
-        <section id="skills" class="section bg-darker">
+        <section id="projects" class="section bg-darker">
+            <div class="container">
+                <h2 class="title reveal">Projet Académique Majeur</h2>
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <h3>Infrastructure Maison des Ligues (M2L)</h3>
+                        <span class="status-badge">Atelier de Professionnalisation</span>
+                    </div>
+                    
+                    <p class="project-desc" style="color: var(--text-muted); margin-bottom: 20px;">
+                        Simulation d'un environnement professionnel grandeur nature réalisée en équipe (3 à 4 étudiants), pilotée en mode projet via <strong>Trello</strong> avec une très forte autonomie. L'objectif principal : <strong>concevoir une solution d'infrastructure réseau</strong> complète, sécurisée et hautement disponible, destinée à héberger les ressources partagées de plusieurs ligues sportives.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge"><i class="fa-solid fa-shield-halved"></i> pfSense</span>
+                        <span class="tech-badge"><i class="fa-brands fa-linux"></i> Debian</span>
+                        <span class="tech-badge"><i class="fa-brands fa-windows"></i> Windows Server</span>
+                        <span class="tech-badge"><i class="fa-solid fa-sitemap"></i> Active Directory</span>
+                        <span class="tech-badge"><i class="fa-solid fa-network-wired"></i> 7 VLANs</span>
+                        <span class="tech-badge"><i class="fa-solid fa-server"></i> HAProxy / FTP</span>
+                        <span class="tech-badge"><i class="fa-solid fa-chart-line"></i> Zabbix & GLPI</span>
+                    </div>
+
+                    <div class="skills-covered" style="margin-top: 25px;">
+                        <h4 style="color: var(--text-white); margin-bottom: 15px;"><i class="fa-solid fa-bullseye" style="color: var(--primary); margin-right: 10px;"></i> Compétences du référentiel mobilisées :</h4>
+                        <ul class="task-list">
+                            <li><strong>Maquetter, installer et déployer une solution :</strong> Implémentation d'une structure hiérarchique à 7 VLANs, mise en place de routeurs redondés via HSRP et conception de DMZ (publique et privée) sécurisées par pfSense.</li>
+                            <li><strong>Administrer sur site et à distance :</strong> Création d'un annuaire Active Directory redondé, gestion des services DHCP/DNS, et sécurisation des prises de contrôle par le protocole SSH.</li>
+                            <li><strong>Exploiter, dépanner et superviser :</strong> Déploiement de serveurs Zabbix et d'agents GLPI pour le monitoring prédictif du parc, la détection de pannes et la gestion des tickets d'incidents.</li>
+                            <li><strong>Rédiger la documentation technique :</strong> Production collaborative sur Teams, incluant les procédures de tests, l'auto-évaluation hebdomadaire et les documentations techniques d'installation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
             <div class="container">
                 <h2 class="title reveal">Compétences SISR</h2>
                 <div class="skills-grid">
@@ -124,7 +161,7 @@
             </div>
         </section>
 
-        <section id="certifications" class="section">
+        <section id="certifications" class="section bg-darker">
             <div class="container">
                 <h2 class="title reveal">Certifications</h2>
                 <div class="skills-grid">
@@ -159,7 +196,7 @@
             </div>
         </section>
 
-        <section id="veille" class="section bg-darker">
+        <section id="veille" class="section">
             <div class="container">
                 <h2 class="title reveal">Veille Technologique</h2>
                 <div class="about-card reveal">
@@ -213,7 +250,7 @@
             </div>
         </section>
 
-        <section id="bts" class="section">
+        <section id="bts" class="section bg-darker">
             <div class="container reveal">
                 <h2 class="title">Référentiel BTS SIO</h2>
                 <div class="table-container">
@@ -237,7 +274,7 @@
             </div>
         </section>
 
-        <section id="contact" class="section bg-darker">
+        <section id="contact" class="section">
             <div class="container reveal">
                 <h2 class="title">Me Contacter</h2>
                 <div class="contact-grid">
